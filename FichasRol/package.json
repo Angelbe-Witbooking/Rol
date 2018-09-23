@@ -1,0 +1,28 @@
+{
+  "name": "FichasRol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "neutrino build",
+    "start": "neutrino lint --fix & neutrino start",
+    "lint": "neutrino lint --fix",
+    "test": "neutrino test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-hot-loader": "^4.3.7",
+    "styled-components": "^3.4.6"
+  },
+  "devDependencies": {
+    "@neutrinojs/airbnb": "^8.3.0",
+    "@neutrinojs/jest": "^8.3.0",
+    "@neutrinojs/react": "^8.3.0",
+    "neutrino": "^8.3.0"
+  }
+}
