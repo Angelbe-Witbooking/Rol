@@ -11,7 +11,7 @@ const DivFlexGlifos = styled.div`
 const DivGlifo = styled.div`
   position: relative;
   text-align: center;
-  height: 300px;
+  height: 240px;
   border: 1px solid black;
   text-transform:uppercase;
 `;
