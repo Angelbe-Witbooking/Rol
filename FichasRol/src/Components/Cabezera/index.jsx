@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const FlexContainer = styled.div`
   display: flex;
@@ -20,13 +21,17 @@ const Titulo = styled.div`
   width: 31%;
 `;
 
-export default function Cabezera() {
+export default function Cabezera(props) {
   return (
     <div className="Cabezera">
       <FlexContainer>
         <PlayerName>Jugador:</PlayerName>
-        <Titulo>Ficha de Personaje</Titulo>
+        <Titulo>{props.title}</Titulo>
       </FlexContainer>
     </div>
   );
 }
+
+Cabezera.propTypes = {
+  title: PropTypes.string.isRequired,
+};
