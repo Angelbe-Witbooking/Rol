@@ -27,11 +27,12 @@ const FlexContainerInputs = styled.div`
     margin-right: 6px;
   }
 `;
+
 const ClaseContainer = styled.div`
   color: white;
   border: 1px solid black;
   border-radius: 15px;
-  background-color: ${styleVariables.colorHabilidades};
+  background-color: ${props => (props.relleno ? styleVariables.colorHabilidades : '')};
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
@@ -96,9 +97,9 @@ const habilidades2 = [
   { name: 'Sigilo*', attribute: 'DES' },
   { name: 'Supervivencia*', attribute: 'SAB' },
   { name: 'Animales*', attribute: 'CAR' },
-  { name: '', attribute: '' },
-  { name: '', attribute: '' },
-  { name: '', attribute: '' },
+  { name: '', attribute: undefined },
+  { name: '', attribute: undefined },
+  { name: '', attribute: undefined },
 ];
 let key = 0;
 function getKey() {
@@ -136,7 +137,7 @@ export default function Habilidades() {
             const Container = (
               <div key={getKey()}>
                 <FlexContainerAtributo>
-                  <ClaseContainer>
+                  <ClaseContainer relleno={value.attribute}>
                     <TextContainer>{value.name}</TextContainer>
                   </ClaseContainer>
                   {inputGenerator(value.attribute)}
@@ -153,7 +154,7 @@ export default function Habilidades() {
             const Container = (
               <div key={getKey()}>
                 <FlexContainerAtributo>
-                  <ClaseContainer>
+                  <ClaseContainer relleno={value.attribute}>
                     <TextContainer>{value.name}</TextContainer>
                   </ClaseContainer>
                   {inputGenerator(value.attribute)}

@@ -4,7 +4,7 @@ const FlexContainer = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
 `;
 const PlayerName = styled.div`
   border: 1px black solid;
@@ -14,10 +14,10 @@ const PlayerName = styled.div`
 `;
 const Titulo = styled.div`
   font-size: 24px;
-  text-align:center;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  width:31%;
+  width: 31%;
 `;
 
 export default function Cabezera() {

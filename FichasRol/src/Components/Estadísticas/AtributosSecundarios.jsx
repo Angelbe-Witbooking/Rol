@@ -42,19 +42,16 @@ const TextOtrosContainer = styled.div`
   margin-right: 5px;
 `;
 const TextRacialContainer = styled.div`
-  margin-right: 10px;
+  margin-right: 12px;
 `;
 const TextMejoraContainer = styled.div`
   margin-right: 10px;
-`;
-const TextBaseContainer = styled.div`
-  margin-right: 15px;
 `;
 const TextModContainer = styled.div`
   margin-right: 20px;
 `;
 const TextTotalContainer = styled.div`
-  margin-right: 20px;
+  margin-right: 25px;
 `;
 let key = 0;
 function getKey() {
@@ -67,14 +64,12 @@ const atributosSecundarios = [
   { name: 'Voluntad', attribute: 'SAB' },
   { name: 'Ataque', attribute: 'DES' },
 ];
-
 export default function AtributosSecundarios() {
   return (
     <AtributoSecundarioComponent className="AtributosSecundarios">
       <FlexContainerTitles>
         <TextTotalContainer>Total</TextTotalContainer>
         <TextModContainer>Mod</TextModContainer>
-        <TextBaseContainer>Base</TextBaseContainer>
         <TextMejoraContainer>Mejora</TextMejoraContainer>
         <TextRacialContainer>Racial</TextRacialContainer>
         <TextOtrosContainer>Otros</TextOtrosContainer>
@@ -87,8 +82,8 @@ export default function AtributosSecundarios() {
                 <TextContainer>{value.name}</TextContainer>
               </ClaseContainer>
               <FlexContainerInputs>
-                <InputClase />=<InputClase defaultValue={value.attribute} />+<InputClase />=
-                <InputClase />+<InputClase />+<InputClase />
+                <InputClase />=<InputClase defaultValue={value.attribute} />+<InputClase />+
+                <InputClase />+<InputClase />
               </FlexContainerInputs>
             </FlexContainerAtributoSecundario>
           </div>
