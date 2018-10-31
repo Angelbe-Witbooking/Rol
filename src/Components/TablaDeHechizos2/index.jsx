@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const DivFlexHechizos = styled.div`
   font-size: 10px;
   display: grid;
-  grid-template: 100% / 49% 49%;
+  grid-template: auto / 49% 49%;
   grid-gap: 10px 0;
   justify-content: space-between;
 `;

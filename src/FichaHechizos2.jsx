@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import './App.css';
-import Cabezera from './Components/Cabezera/index';
+import Cabezera from '../src/Components/Cabezera';
 import styleVariables from './Assets/StyleVariables';
-import TablaDeHechizos from './Components/TablaDeHechizos/index';
-import TablaDeGlifos from './Components/TablaDeGlifos/index';
+import TablaDeHechizos from '../src/Components/TablaDeHechizos2';
+import TablaDeGlifos from '../src/Components/TablaDeGlifos';
 
 const GridContainer = styled.div`
   display: grid;

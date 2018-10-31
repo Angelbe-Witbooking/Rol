@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import './App.css';
-import Cabezera from './Components/Cabezera/index';
-import Personaje from './Components/Personaje/index';
-import Estadisticas from './Components/Estadísticas/index';
-import Habilidades from './Components/Habilidades/index';
-import TablaEXP from './Components/TablaExp/index';
+import Cabezera from '../src/Components/Cabezera';
+import Personaje from '../src/Components/Personaje';
+import Estadisticas from '../src/Components/Estadísticas';
+import Habilidades from '../src/Components/Habilidades';
+import TablaEXP from '../src/Components/TablaExp';
 import styleVariables from './Assets/StyleVariables';
 
 const GridContainer = styled.div`
