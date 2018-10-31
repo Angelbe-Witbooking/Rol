@@ -25,6 +25,7 @@ const Cajita = styled.input`
   width: 100%;
 `;
 const Historia = styled.div`
+  font-size: 13px;
   border: 1px solid black;
   height: 105px;
   width: 100%;
@@ -85,7 +86,7 @@ export default function Personaje() {
           </GridContainer>
           <div>
             <Historia>
-              <div>Historia</div>
+              <div>Historia:</div>
             </Historia>
           </div>
         </PersonajeStyle>

@@ -44,16 +44,16 @@ const TextOtrosContainer = styled.div`
 margin-right:15px;
 `;
 const TextRacialContainer = styled.div`
-margin-right:25px;
+margin-right:32px;
 `;
 const TextMejoraContainer = styled.div`
-margin-right:20px;
+margin-right:30px;
 `;
 const TextTotalContainer = styled.div`
-margin-right:25px;
+margin-right:30px;
 `;
 const TextModContainer = styled.div`
-margin-right:25px;
+margin-right:30px;
 `;
 let key = 0;
 function getKey() {
@@ -66,7 +66,7 @@ export default function Atributos() {
   return (
     <AtributoComponent className="Atributos">
       <FlexContainerTitles>
-        <TextModContainer>Mod</TextModContainer>
+        <TextModContainer>Mod.</TextModContainer>
         <TextTotalContainer>Total</TextTotalContainer>
         <TextMejoraContainer>Mejora</TextMejoraContainer>
         <TextRacialContainer>Racial</TextRacialContainer>
