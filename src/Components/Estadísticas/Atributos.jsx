@@ -1,92 +1,36 @@
 import styled from 'styled-components';
-import styleVariables from '../../Assets/StyleVariables';
+import PropTypes from 'prop-types';
+import Casillero from '../Casillero';
 
 const AtributoComponent = styled.div`
   width: 1375px;
 `;
-const FlexContainerTitles = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  text-transform:uppercase;
-  font-size:12px;
-`;
-const FlexContainerAtributo = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-`;
-const FlexContainerInputs = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-  :last-child {
-    margin-right: 6px;
-  }
-`;
-const ClaseContainer = styled.div`
-  color: white;
-  background-color: ${styleVariables.colorAtributos};
-  text-transform: uppercase;
+const TitleContainer = styled.div`
   font-weight: 700;
-  padding: 5px 0;
+  font-size: 20px;
+  text-decoration: underline;
 `;
-const TextContainer = styled.div`
-  width: 150px;
-  padding-left: 10px;
-`;
-const InputClase = styled.input`
-  border: 1px solid black;
-  height: 20px;
-  width: 100%;
-`;
-const TextOtrosContainer = styled.div`
-margin-right:15px;
-`;
-const TextRacialContainer = styled.div`
-margin-right:32px;
-`;
-const TextMejoraContainer = styled.div`
-margin-right:30px;
-`;
-const TextTotalContainer = styled.div`
-margin-right:30px;
-`;
-const TextModContainer = styled.div`
-margin-right:30px;
-`;
-let key = 0;
-function getKey() {
-  key += 1;
-  return key;
-}
-const atributos = ['Fuerza', 'Destreza', 'Constitución', 'Inteligencia', 'Sabiduria', 'Carisma'];
 
-export default function Atributos() {
+export default function Atributos(props) {
   return (
     <AtributoComponent className="Atributos">
-      <FlexContainerTitles>
-        <TextModContainer>Mod.</TextModContainer>
-        <TextTotalContainer>Total</TextTotalContainer>
-        <TextMejoraContainer>Mejora</TextMejoraContainer>
-        <TextRacialContainer>Racial</TextRacialContainer>
-        <TextOtrosContainer>Otros</TextOtrosContainer>
-      </FlexContainerTitles>
-      {atributos.map((value) => {
-        const Container = (
-          <div key={getKey()}>
-            <FlexContainerAtributo>
-              <ClaseContainer>
-                <TextContainer>{value}</TextContainer>
-              </ClaseContainer>
-              <FlexContainerInputs>
-                <InputClase /> <InputClase />=<InputClase />+<InputClase />+<InputClase />
-              </FlexContainerInputs>
-            </FlexContainerAtributo>
-          </div>
-        );
-        return Container;
-      })}
+      <TitleContainer>Atributos</TitleContainer>
+      <div>
+        <Casillero className="Strenght" values={props.characterValues.strenght} />
+        <Casillero className="Dexterity" values={props.characterValues.dexterity} />
+        <Casillero className="Constitution" values={props.characterValues.constitution} />
+        <Casillero className="Intelligence" values={props.characterValues.intelligence} />
+        <Casillero className="Wisdom" values={props.characterValues.wisdom} />
+        <Casillero className="Charisma" values={props.characterValues.charisma} />
+      </div>
     </AtributoComponent>
   );
 }
+
+Atributos.propTypes = {
+  characterValues: PropTypes.object,
+};
+
+Atributos.defaultProps = {
+  characterValues: {},
+};

@@ -4,8 +4,8 @@ import Cabezera from '../src/Components/Cabezera';
 import Personaje from '../src/Components/Personaje';
 import Estadisticas from '../src/Components/Estadísticas';
 import Habilidades from '../src/Components/Habilidades';
-import TablaEXP from '../src/Components/TablaExp';
 import styleVariables from './Assets/StyleVariables';
+import characterValues from './Values/characterValues';
 
 const GridContainer = styled.div`
   display: grid;
@@ -24,9 +24,8 @@ export default function FichaPersonaje() {
       <GridContainer className="Ficha de Personaje">
         <Cabezera title="Ficha de Personaje" />
         <Personaje />
-        <Estadisticas />
+        <Estadisticas characterValues={characterValues} />
         <Habilidades />
-        <TablaEXP />
       </GridContainer>
     </PageContainer>
   );
