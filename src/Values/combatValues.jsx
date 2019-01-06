@@ -176,6 +176,7 @@ const rDPhysical = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };
@@ -186,6 +187,7 @@ const rDArcane = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };
@@ -196,6 +198,7 @@ const rDLight = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };
@@ -206,6 +209,7 @@ const rDDark = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };
@@ -216,6 +220,7 @@ const rDFire = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };
@@ -226,6 +231,7 @@ const rDAir = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };
@@ -236,6 +242,7 @@ const rDWater = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };
@@ -246,6 +253,7 @@ const rDEarth = {
   boxes: [
     {
       boxContainerStyles: { 'margin-top': '0' },
+      key: Math.random(),
     },
   ],
 };

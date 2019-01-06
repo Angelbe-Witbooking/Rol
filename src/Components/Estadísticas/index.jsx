@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Atributos from './Atributos';
 import AtributosSecundarios from './AtributosSecundarios';
-import styleVariables from '../../Assets/StyleVariables';
+import Casillero from '../Casillero';
 
-const EstadisticasComponent = styled.div``;
+const EstadisticasComponent = styled.div`
+  text-transform: uppercase;
+`;
 const FlexContainerSpaced = styled.div`
   display: flex;
   width: 100%;
@@ -15,55 +18,26 @@ const FlexContainerAtributes = styled.div`
   width: 100%;
   justify-content: space-between;
 `;
-const FlexContainerClase = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-`;
-const FlexContainerExperiencia = styled.div`
-  width: 415px;
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-`;
-const ClaseContainer = styled.div`
-  color: white;
-  background-color: ${styleVariables.colorAtributos};
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 5px 0;
-`;
-const TextContainer = styled.div`
-  padding-right: 50px;
-  padding-left: 10px;
-`;
-const InputClase = styled.input`
-  border: 1px solid black;
-  height: 20px;
-  width: 100%;
-`;
 
-export default function Estadisticas() {
+export default function Estadisticas(props) {
   return (
     <EstadisticasComponent className="Estadisticas">
       <FlexContainerSpaced>
-        <FlexContainerClase>
-          <ClaseContainer>
-            <TextContainer>Clase</TextContainer>
-          </ClaseContainer>
-          <InputClase />
-        </FlexContainerClase>
-        <FlexContainerExperiencia className="FlexContainerExperiencia">
-          <ClaseContainer>
-            <TextContainer>Experiencia</TextContainer>
-          </ClaseContainer>
-          <InputClase />
-        </FlexContainerExperiencia>
+        <Casillero className="Clase" values={props.characterValues.clase} />
+        <Casillero className="Experience" values={props.characterValues.experience} />
       </FlexContainerSpaced>
       <FlexContainerAtributes>
-        <Atributos />
-        <AtributosSecundarios />
+        <Atributos characterValues={props.characterValues} />
+        <AtributosSecundarios characterValues={props.characterValues} />
       </FlexContainerAtributes>
     </EstadisticasComponent>
   );
 }
+
+Estadisticas.propTypes = {
+  characterValues: PropTypes.object,
+};
+
+Estadisticas.defaultProps = {
+  characterValues: {},
+};

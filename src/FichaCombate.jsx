@@ -3,7 +3,7 @@ import './App.css';
 import Cabezera from '../src/Components/Cabezera';
 import Casillero from '../src/Components/Casillero';
 import styleVariables from './Assets/StyleVariables';
-import combatValues from './Values/index';
+import combatValues from './Values/combatValues';
 
 const GridContainer = styled.div`
   display: grid;
